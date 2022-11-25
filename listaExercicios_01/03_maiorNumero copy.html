@@ -7,13 +7,16 @@
     */
 
     //ENTRADA
-    let listaDeNumeros = [];
 
     //PROCESSAMENTO
+    let maiorNumero = 0;
     for (let controle = 1; controle <= 5; controle++) {
-        listaDeNumeros.push(parseInt(prompt(`Informe um número:`)));
+        let numeroAtual = parseInt(prompt(`Insira um número:`));
+        if (numeroAtual > maiorNumero) {
+            maiorNumero = numeroAtual;
+        }
     }
 
     //SAÍDA
-    document.write(`O maior número é ${listaDeNumeros.sort((a, b) => b-a)[0]}!`);
+    document.write(`O maior número é o ${maiorNumero}!`);
 </script>
