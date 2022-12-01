@@ -6,11 +6,16 @@
     */
 
     //ENTRADA
-
+    const impares = [];
 
     //PROCESSAMENTO
-
+    for (const controle = 1; controle <= 50; controle++){
+        if (controle % 2 != 0) {
+            impares.push(controle);
+        } 
+    }
 
     //SAÍDA
+    document.write(` Números Ímpares ${impares.join(", ")}`)
 
 </script>
