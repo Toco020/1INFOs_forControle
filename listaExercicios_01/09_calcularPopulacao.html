@@ -6,14 +6,14 @@
     */
 
     //ENTRADA
-    const população = 50000;
+    let população = 50000;// Erro fatal ao utilizar 'const' ao invés de 'let'
     const taxaCrescimento = 1.5;
-    const população5Anos = 0;
-    const população10Anos = 0;
+    let população5Anos = 0;// Erro fatal ao utilizar 'const' ao invés de 'let'
+    let população10Anos = 0;// Erro fatal ao utilizar 'const' ao invés de 'let'
 
 
     //PROCESSAMENTO
-    for( const anos= 0; anos <= 10;anos++){
+    for(let anos= 0; anos <= 10;anos++){// Erro fatal ao utilizar 'const' ao invés de 'let'
         população = população + (população*taxaCrescimento/100);
         if (anos === 5){
             população5Anos = população;
@@ -24,6 +24,8 @@
     }
 
     //SAÍDA
-    document.write(`População em cinco anos : ${população5Anos}` +"</br>");
-    document.write(`População em dez anos : ${população10Anos}`)
+    document.write(`População em cinco anos : ${população5Anos.toFixed(0)}` +"</br>");
+    document.write(`População em dez anos : ${população10Anos.toFixed(0)}`)
+
+    // A saída poderia estar melhor apresentável
 </script>

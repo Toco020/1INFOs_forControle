@@ -9,7 +9,7 @@
     const impares = [];
 
     //PROCESSAMENTO
-    for (const controle = 1; controle <= 50; controle++){
+    for (let controle = 1; controle <= 50; controle++){ // Erro fatal ao utilizar 'const' ao invés de 'let'
         if (controle % 2 != 0) {
             impares.push(controle);
         } 

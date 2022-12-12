@@ -8,18 +8,16 @@
 
     //ENTRADA
     const quantidadeNotas = parseInt(prompt(" Quantas notas o aluno obteve?"));
-    const notaFinal = 0;
+    let notaFinal = 0; // Erro fatal ao utilizar 'const' ao invés de 'let'
     
-        for(contador = 1; contador <= quantidadeNotas; contador++){
-           const notas = Number(prompt(`Qual a nota ${contador} ?`));
-           notaFinal = notaFinal + notas;
-    }
-
-    const Média = (notaFinal/quantidadeNotas);
     //PROCESSAMENTO
-    
-
-    document.write(`A média do aluno é de ${Média.toFixed(2)}`)
+    for(contador = 1; contador <= quantidadeNotas; contador++){
+        let notas = Number(prompt(`Qual a nota ${contador} ?`));
+        notaFinal = notaFinal + notas;
+    }
+    console.log(quantidadeNotas);
+    const Media = (notaFinal/quantidadeNotas);
+   
     //SAÍDA
-
+    document.write(`A média do aluno é de ${Media.toFixed(2)}`)
 </script>

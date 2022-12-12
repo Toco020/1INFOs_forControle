@@ -7,10 +7,10 @@
 
     //ENTRADA
     alert("Informe 5 notas");
-    const numero = 0
+    let numero = 0// Erro fatal ao utilizar 'const' ao invés de 'let'
    
     //PROCESSAMENTO
-    for(const Contador = 0; Contador< 5; Contador++) {
+    for(let Contador = 0; Contador< 5; Contador++) {// Erro fatal ao utilizar 'const' ao invés de 'let'
         const perguntas = Number(prompt(`Insira nota ${Contador + 1}`));
             numero = numero + perguntas;
         }
@@ -20,7 +20,7 @@
 
     //SAÍDA
     document.write( ` A soma dos números é ${numero}`);
-    document.write(`A média dos números é ${media}`)
+    document.write(` A média dos números é ${media}`)
 
     
 </script>
